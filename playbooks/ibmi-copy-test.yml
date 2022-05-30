@@ -1,0 +1,15 @@
+# Copyright (c) IBM Corporation 2019, 2020
+# Apache License, Version 2.0 (see https://opensource.org/licenses/Apache-2.0)
+---
+- hosts: ibmi
+  gather_facts: no
+  collections:
+   - ibm.power_ibmi
+  
+  tasks:
+  - name: Copy test.file on local to a remote IBM i.
+    ibm.power_ibmi.ibmi_copy:
+      src: '/WATARU/SYNC.file'
+      lib_name: 'WATARU4'
+      force: True
+      backup: True
