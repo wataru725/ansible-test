@@ -9,7 +9,7 @@
   tasks:
   - name: Copy test.file on local to a remote IBM i.
     ibm.power_ibmi.ibmi_copy:
-      src: '/WATARU/SYNC.file'
+      src: '/QSYS.LIB/WATARU.LIB/SYNC.FILE'
       lib_name: 'WATARU4'
       force: True
       backup: True
