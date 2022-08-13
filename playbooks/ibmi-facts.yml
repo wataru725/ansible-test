@@ -1,3 +1,4 @@
+---
 - name: Return ibmi_facts
   ibm.power_ibmi.ibmi_facts:
 
