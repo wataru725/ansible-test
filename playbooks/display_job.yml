@@ -1,0 +1,9 @@
+---
+- hosts: ibmi
+  gather_facts: no
+  collections:
+   - ibm.power_ibmi
+
+  tasks: 
+  - name: Display all the active subsystems in this system.
+    ibm.power_ibmi.ibmi_display_subsystem:
