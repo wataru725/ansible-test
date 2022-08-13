@@ -8,3 +8,7 @@
   - name: Display all the active subsystems in this system.
     ibm.power_ibmi.ibmi_display_subsystem:
       subsystem: QINTER
+      register: qinter_job
+  - name: display
+    debug:
+      msg: "{{ qinter_job }}"
