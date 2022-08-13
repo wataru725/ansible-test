@@ -7,6 +7,10 @@
   tasks:
   - name: Return ibmi_facts
     ibm.power_ibmi.ibmi_facts:
-    msg: {{ ansible_facts['tcpip_info'] }}
+    register: ibmi_facts
+
+  - name: Display
+    debug:
+      msg: "{{ ibmi_gacts }}"
 
 
