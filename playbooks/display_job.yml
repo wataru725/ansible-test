@@ -8,8 +8,8 @@
   - name: Display all the active subsystems in this system.
     ibm.power_ibmi.ibmi_display_subsystem:
       subsystem: QINTER
-    register: result_command
+    
 
   - name: print result
     debug:
-      msg: '{{ result_command.AUTHORIZATION_NAME }}'
+      msg: '{{ active_jobs }}'
