@@ -11,6 +11,6 @@
 
   - name: Display
     debug:
-      msg: "{{ ibmi_gacts }}"
+      msg: "{{ ibmi_facts }}"
 
 
