@@ -1,5 +1,11 @@
 ---
-- name: Return ibmi_facts
-  ibm.power_ibmi.ibmi_facts:
+- hosts: ibmi
+  gather_facts: yes
+  collections:
+   - ibm.power_ibmi
 
-- name: Assert a fact returned by ibmi_facts
+  tasks:
+  - name: Return ibmi_facts
+    ibm.power_ibmi.ibmi_facts:
+
+  - name: Assert a fact returned by ibmi_facts
