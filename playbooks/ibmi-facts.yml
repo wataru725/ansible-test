@@ -11,6 +11,6 @@
 
   - name: Display
     debug:
-      var: ibmi_facts.group_ptf_info
+      var: group_ptf_info
 
 
