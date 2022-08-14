@@ -11,8 +11,9 @@
   - name: Display all the active subsystems in this system.
     ibm.power_ibmi.ibmi_display_subsystem:
       subsystem: QINTER
+    register: job_info
     
 
-  - name: print result
-    debug:
-      msg: '{{ var1 }}'
+  - debug:
+      var: job_info
+      
