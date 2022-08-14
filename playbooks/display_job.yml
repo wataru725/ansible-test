@@ -15,4 +15,4 @@
     
 
   - debug:
-      var: {{ job_info.active_jobs | JOB_NAME }}
+      var: {{ job_info.active_jobs |  select("match", "JOB_NAME") }}
