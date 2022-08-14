@@ -1,6 +1,6 @@
 ---
 - hosts: ibmi
-  gather_facts: yes
+  gather_facts: no
   collections:
    - ibm.power_ibmi
 
@@ -11,6 +11,6 @@
 
   - name: Display
     debug:
-      msg: "{{ ibmi_facts }}"
+      var: ibmi_facts.group_ptf_info[0]
 
 
