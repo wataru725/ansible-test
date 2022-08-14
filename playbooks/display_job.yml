@@ -4,9 +4,6 @@
   collections:
    - ibm.power_ibmi
 
-  vars:
-    var1: "{{ active_jobs }} "
-
   tasks: 
   - name: Display all the active subsystems in this system.
     ibm.power_ibmi.ibmi_display_subsystem:
