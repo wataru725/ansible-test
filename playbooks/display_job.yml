@@ -13,6 +13,9 @@
       subsystem: QINTER
     register: job_info
     
+  - debug:
+      var: job_info.active_jobs
+
 
   - debug:
       var: '{{ job_info.active_jobs |  select("match", "JOB_NAME") }}'
