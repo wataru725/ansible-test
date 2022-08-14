@@ -11,6 +11,6 @@
 
   - name: Display
     debug:
-      msg: {{group_ptf_info}}
+      msg: "{{ group_ptf_info }}"
 
 
